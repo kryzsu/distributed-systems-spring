@@ -1,5 +1,5 @@
 @startuml
-title Simple Orthogonal Composite State Model
+title Docker main flow (states)
 
 state Registry
 
