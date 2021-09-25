@@ -1,0 +1,15 @@
+@startmindmap
+
+* docker
+
+** image
+*** build
+*** history
+*** inspect
+*** ls
+*** pull
+*** push
+*** rm
+*** prune
+
+@endmindmap
