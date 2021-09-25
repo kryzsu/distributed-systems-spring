@@ -1,0 +1,38 @@
+@startuml
+title Simple Orthogonal Composite State Model
+
+state Registry
+
+note "FROM EXISTING_IMAGE\nCOPY FILES\nRUN\nCMD" as N1
+
+
+state de 
+
+state Dockerfile
+
+state "docker engine" as de  {
+  state RunningContainer
+  state StopedContainer
+
+}
+
+state image
+
+image --> RunningContainer: docker run
+note on link 
+--detach \n
+--name=[container_name] \n
+--env="MYSQL_ROOT_PASSWORD=[my_password]" \n
+--publish 6603:3306 \n
+--volume=/FOLDER
+end note
+
+RunningContainer -Right-> StopedContainer : docker stop CONTAINER_NAME
+StopedContainer -Left-> RunningContainer :docker start CONTAINER_NAME
+
+
+Registry -> image: docker pull IMAGE_NAME
+image -> Registry: docker push
+
+Dockerfile --> image: docker build
+@enduml
