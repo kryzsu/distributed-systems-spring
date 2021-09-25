@@ -1,5 +1,4 @@
 @startuml
-title Docker main flow (states)
 
 state Registry
 
@@ -20,10 +19,10 @@ state image
 
 image --> RunningContainer: docker run
 note on link 
---detach \n
---name=[container_name] \n
---env="MYSQL_ROOT_PASSWORD=[my_password]" \n
---publish 6603:3306 \n
+--detach
+--name=[container_name]
+--env="MYSQL_ROOT_PASSWORD=[my_password]"
+--publish 6603:3306
 --volume=/FOLDER
 end note
 
