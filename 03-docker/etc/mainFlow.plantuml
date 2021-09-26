@@ -26,6 +26,8 @@ note on link
 --volume=/FOLDER
 end note
 
+image --> StopedContainer: docker create
+
 RunningContainer -Right-> StopedContainer : docker stop CONTAINER_NAME
 StopedContainer -Left-> RunningContainer :docker start CONTAINER_NAME
 
