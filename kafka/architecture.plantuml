@@ -1,0 +1,37 @@
+@startuml
+
+cloud KafkaCluster {
+  node KafkaBroker1 {
+    node Topic1 {
+        node Partition1 
+        node Partition2 
+    }
+    
+    node Topic2 {
+        node Partition1
+    }
+    
+    node Topic3 {
+        node Partition1
+    }
+  }
+  
+  node KafkaBroker2 
+}
+
+node Zookeeper
+
+collections Producer
+
+collections Consumer
+
+Zookeeper -- Producer
+
+Zookeeper -- Consumer
+
+Zookeeper -- KafkaBroker1
+Zookeeper -- KafkaBroker2
+
+Producer -[#blue,plain,thickness=2]-> Topic2 #blue: publish (write)
+Topic2 -[#blue,plain,thickness=2]-> Consumer: subscribe to (read)
+@enduml
