@@ -1,6 +1,7 @@
-package com.example.demo;
+package hu.me.iit.distributedsystems.kafka.consumer;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication

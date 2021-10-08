@@ -1,13 +1,15 @@
-package com.example.demo;
+package hu.me.iit.distributedsystems.kafka.producer;
 
-import com.example.demo.impl.MainService;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import java.util.concurrent.ExecutionException;
+import java.lang.InterruptedException;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import javax.validation.Valid;
+
+import hu.me.iit.distributedsystems.kafka.producer.impl.MainService;
 
 @RestController
 @AllArgsConstructor
@@ -16,7 +18,8 @@ public class MainController {
     private final MainService mainService;
 
     @RequestMapping(path="/send-message")
-    public void sendMessage(@Valid @RequestBody MessageDto messageDto) throws JsonProcessingException {
+    public void sendMessage(@Valid @RequestBody MessageDto messageDto)
+            throws JsonProcessingException, ExecutionException, InterruptedException {
         mainService.sendMessage(messageDto);
     }
 

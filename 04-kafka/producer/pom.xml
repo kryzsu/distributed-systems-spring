@@ -8,10 +8,10 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>hu.me.iit.distributedsystems</groupId>
+	<artifactId>kafka-provider</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>demo</name>
+	<name>Kafka producer</name>
 	<description>Demo project for Spring Boot and Kafka</description>
 	<properties>
 		<java.version>11</java.version>

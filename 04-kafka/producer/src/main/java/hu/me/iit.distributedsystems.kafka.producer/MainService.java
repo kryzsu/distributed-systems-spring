@@ -1,4 +1,4 @@
-package com.example.demo;
+package hu.me.iit.distributedsystems.kafka.producer;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 

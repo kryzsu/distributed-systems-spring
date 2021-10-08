@@ -1,7 +1,5 @@
-package com.example.demo.impl;
+package hu.me.iit.distributedsystems.kafka.producer.impl;
 
-import com.example.demo.MessageDto;
-import com.example.demo.MessageWithId;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
@@ -12,15 +10,18 @@ import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
 import org.springframework.util.concurrent.ListenableFuture;
 import org.springframework.util.concurrent.ListenableFutureCallback;
-
 import java.time.LocalDateTime;
 import java.util.UUID;
 import java.util.concurrent.ExecutionException;
 
+import hu.me.iit.distributedsystems.kafka.producer.MessageDto;
+import hu.me.iit.distributedsystems.kafka.producer.MessageWithId;
+
+
 @Slf4j
 @AllArgsConstructor
 @Service
-public class MainService implements com.example.demo.MainService {
+public class MainService implements hu.me.iit.distributedsystems.kafka.producer.MainService {
     private final KafkaTemplate<Long, String> kafkaTemplate;
     private final String TOPIC_NAME = "chat-rooms";
     private final ObjectMapper objectMapper;
