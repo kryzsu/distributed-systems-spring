@@ -27,7 +27,10 @@ public class ChatController {
     }
 
     @GetMapping()
-    public Page<ChatMessage> findBySender(@RequestBody @Valid FindBySenderDto senderDto) {
-        return chatMessageRepository.findBySender(senderDto.getSenderName(), PageRequest.of(0, 10));
+    public Page<ChatMessage> findBySender(@RequestBody @Valid FindByDto senderDto) {
+        return chatMessageRepository.findBySenderOrMessage(
+                senderDto.getQuery(),
+                senderDto.getQuery(),
+                PageRequest.of(0, 10));
     }
 }

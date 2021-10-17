@@ -5,7 +5,7 @@ import lombok.Data;
 import javax.validation.constraints.NotBlank;
 
 @Data
-public class FindBySenderDto {
+public class FindByDto {
     @NotBlank
-    private String senderName;
+    private String query;
 }
