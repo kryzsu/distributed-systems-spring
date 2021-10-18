@@ -27,7 +27,7 @@ public class ChatController {
     }
 
     @GetMapping()
-    public Page<ChatMessage> findBySender(@RequestBody @Valid FindByDto senderDto) {
+    public Page<ChatMessage> findByMessage(@RequestBody @Valid FindByDto senderDto) {
         return chatMessageRepository.findBySenderOrMessage(
                 senderDto.getQuery(),
                 senderDto.getQuery(),

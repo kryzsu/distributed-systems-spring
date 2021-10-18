@@ -8,9 +8,11 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>hu.me.iit.distributedsystems</groupId>
 	<artifactId>elasticsearch-repository</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>elasticsearch repository</name>
 	<description>Demo project for Spring Boot Elasticsearch by repository</description>
 	<properties>
