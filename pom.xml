@@ -13,6 +13,7 @@
         <module>04-kafka</module>
         <module>05-elasticsearch</module>
         <module>06-spring-cloud</module>
+        <module>06-messaging-stomp-websocket</module>
     </modules>
 
 </project>
