@@ -2,17 +2,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>distributed-systems-spring</artifactId>
+        <groupId>hu.me.iit.distributedsystems</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>hu.me.iit.distributedsystems</groupId>
-    <artifactId>distributed-systems-spring</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>distributed-systems-spring-aggregator-modules</name>
 
+    <artifactId>06-spring-cloud</artifactId>
     <packaging>pom</packaging>
+
     <modules>
-        <module>04-kafka</module>
-        <module>05-elasticsearch</module>
-        <module>06-spring-cloud</module>
+        <module>spring-cloud-config</module>
     </modules>
 
 </project>
