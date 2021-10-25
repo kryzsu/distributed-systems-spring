@@ -6,7 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class ElasticsearchRepositoryApplicationTests {
 
-	@Test
+	// @Test
 	void contextLoads() {
 	}
 
