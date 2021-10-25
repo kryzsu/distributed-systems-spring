@@ -1,15 +1,12 @@
 package hu.me.iit.distributedsystems.elasticsearchrepository;
 
 import lombok.Data;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.elasticsearch.annotations.Document;
-import org.springframework.data.elasticsearch.annotations.Field;
-import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import javax.validation.constraints.NotBlank;
 
 @Data
 public class ChatMessageDto {
+    @NotBlank
     private String id;
     @NotBlank
     private String message;
@@ -19,4 +16,15 @@ public class ChatMessageDto {
     private String roomId;
     @NotBlank
     private String roomName;
+
+
+    public ChatMessage toDocument() {
+        return ChatMessage.builder()
+                .id(this.getId())
+                .message(this.getMessage())
+                .sender(this.getSender())
+                .roomId(this.getRoomId())
+                .roomName(this.getRoomName())
+                .build();
+    }
 }

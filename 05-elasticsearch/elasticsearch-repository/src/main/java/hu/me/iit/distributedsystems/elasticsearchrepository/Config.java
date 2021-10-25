@@ -8,9 +8,7 @@ import org.springframework.data.elasticsearch.config.AbstractElasticsearchConfig
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories;
 
 @Configuration
-@EnableElasticsearchRepositories(
-        basePackages = "hu.me.iit.distributedsystems.elasticsearchrepository"
-)
+@EnableElasticsearchRepositories()
 public class Config extends AbstractElasticsearchConfiguration {
     @Override
     public RestHighLevelClient elasticsearchClient() {

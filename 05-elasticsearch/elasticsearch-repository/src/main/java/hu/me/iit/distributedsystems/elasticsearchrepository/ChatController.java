@@ -1,5 +1,8 @@
 package hu.me.iit.distributedsystems.elasticsearchrepository;
 
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -15,22 +18,23 @@ public class ChatController {
 
     @PostMapping()
     public void newData(@RequestBody @Valid ChatMessageDto chatMessageDto) {
-        chatMessageRepository.save(
-                ChatMessage.builder()
-                        .id(chatMessageDto.getId())
-                        .message(chatMessageDto.getMessage())
-                        .sender(chatMessageDto.getSender())
-                        .roomId(chatMessageDto.getRoomId())
-                        .roomName(chatMessageDto.getRoomName())
-                        .build()
-        );
+        chatMessageRepository.save( chatMessageDto.toDocument() );
     }
 
-    @GetMapping()
-    public Page<ChatMessage> findByMessage(@RequestBody @Valid FindByDto senderDto) {
-        return chatMessageRepository.findBySenderOrMessage(
-                senderDto.getQuery(),
-                senderDto.getQuery(),
+    @Operation(summary = "Get a book by its id")
+    @ApiImplicitParams(
+            @ApiImplicitParam(name = "findByDto",
+                    value = "Object to be created", required = true,
+                    dataType = "hu.me.iit.distributedsystems.elasticsearchrepository.FindByDto",
+                    paramType = "body")
+
+    )
+    @GetMapping(consumes = "application/json")
+            public Page<ChatMessage> findMessage(
+            @RequestBody @Valid FindByDto findByDto
+    ) {
+        return chatMessageRepository.findBySender(
+                findByDto.getQuery(),
                 PageRequest.of(0, 10));
     }
 }
