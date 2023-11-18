@@ -2,24 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>distributed-systems-spring</artifactId>
         <groupId>hu.me.iit.distributedsystems</groupId>
+        <artifactId>08-spring-cloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <modelVersion>4.0.0</modelVersion>
 
-    <properties>
-        <spring-cloud.version>2022.0.1</spring-cloud.version>
-    </properties>
+    <artifactId>real</artifactId>
 
-    <artifactId>08-spring-cloud</artifactId>
     <packaging>pom</packaging>
 
-    <modules>
-        <module>spring-cloud-config</module>
-        <module>netflix-discovery</module>
-        <module>real</module>
-    </modules>
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
+    <modules>
+        <module>knowledge-base-interface</module>
+        <module>hitchhikers-guide-galaxy</module>
+    </modules>
 </project>
