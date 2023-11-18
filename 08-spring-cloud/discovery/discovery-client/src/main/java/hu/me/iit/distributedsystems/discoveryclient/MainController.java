@@ -6,15 +6,16 @@ import com.netflix.discovery.shared.Applications;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
 public class MainController {
     private final EurekaClient discoveryClient;
+    private final PeopleManager peopleManager;
 
     private String appName;
-
     @Value("${spring.application.name}")
     public void setAppName(String appName) {
         this.appName = appName;
@@ -29,4 +30,10 @@ public class MainController {
     Applications getAllService() {
         return discoveryClient.getApplications();
     }
+
+    @GetMapping("/getPeopleName/{id}")
+    String getPeopleName(@PathVariable Long id){
+        return peopleManager.get(id).getName();
+    }
+
 }

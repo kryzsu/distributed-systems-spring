@@ -14,5 +14,8 @@ git commit -m "Add application.properties"
 
 testing
 ```shell
-http://localhost:8888/foo/development
+curl http://localhost:8888/foo/development
+
+curl http://localhost:8888/foo/development/master
+
 ```

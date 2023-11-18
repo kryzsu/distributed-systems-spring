@@ -7,13 +7,17 @@
     <artifactId>distributed-systems-spring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>distributed-systems-spring-aggregator-modules</name>
+    <properties>
+        <java.version>11</java.version>
+        <spring.version>3.1.5</spring.version>
+    </properties>
 
     <packaging>pom</packaging>
     <modules>
         <module>04-kafka</module>
         <module>05-elasticsearch</module>
         <module>06-messaging-stomp-websocket</module>
-        <module>07-redis</module>
+        <module>07-spring-redis</module>
         <module>08-spring-cloud</module>
     </modules>
 

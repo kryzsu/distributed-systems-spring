@@ -5,20 +5,22 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.5</version>
+        <version>3.0.12</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>hu.me.iit.distributedsystems</groupId>
-    <artifactId>springcloudconfigclient</artifactId>
+    <artifactId>spring-cloud-config-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>spring-cloud-config-client</name>
     <description>spring-cloud-config-client</description>
+
     <properties>
-        <java.version>11</java.version>
-        <spring-cloud.version>2020.0.4</spring-cloud.version>
+        <java.version>17</java.version>
+        <spring-cloud.version>2022.0.4</spring-cloud.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -35,6 +37,7 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
     <dependencyManagement>
         <dependencies>
             <dependency>

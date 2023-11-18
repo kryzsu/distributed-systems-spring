@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>hu.me.iit.distributedsystems</groupId>
-    <artifactId>kafka-examples</artifactId>
+    <artifactId>04-kafka</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Kafka examples</name>
 
     <packaging>pom</packaging>
     <modules>
-        <module>consumer</module>
-        <module>producer</module>
+        <module>kafka-consumer</module>
+        <module>kafka-producer</module>
     </modules>
 
 </project>

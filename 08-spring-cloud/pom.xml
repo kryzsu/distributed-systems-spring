@@ -9,12 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud</artifactId>
+    <properties>
+        <spring-cloud.version>2022.0.1</spring-cloud.version>
+    </properties>
+
+    <artifactId>08-spring-cloud</artifactId>
     <packaging>pom</packaging>
 
     <modules>
         <module>spring-cloud-config</module>
         <module>discovery</module>
+        <module>discovery/hitchhikers-guide-galaxy</module>
+        <module>discovery/knowledge-base-interface</module>
     </modules>
 
 </project>
