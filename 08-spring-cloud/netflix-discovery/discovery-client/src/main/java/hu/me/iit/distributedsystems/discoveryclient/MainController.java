@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class MainController {
     private final EurekaClient discoveryClient;
-    private final PeopleManager peopleManager;
 
     private String appName;
     @Value("${spring.application.name}")
@@ -30,10 +29,4 @@ public class MainController {
     Applications getAllService() {
         return discoveryClient.getApplications();
     }
-
-    @GetMapping("/getPeopleName/{id}")
-    String getPeopleName(@PathVariable Long id){
-        return peopleManager.get(id).getName();
-    }
-
 }

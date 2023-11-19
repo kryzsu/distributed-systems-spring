@@ -12,6 +12,8 @@ mvn package
 ```shell
 mvn spring-boot:run
 ```
+check the properties file
+`spring.cloud.openfeign.client.config.articles.url=http://localhost:8080`
 
 ## get articles
 ```shell

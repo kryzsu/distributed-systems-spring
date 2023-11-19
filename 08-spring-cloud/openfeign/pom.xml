@@ -8,8 +8,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>openfeign-client</module>
         <module>article-memory-crud</module>
+        <module>article-memory-crud-eureka</module>
+        <module>openfeign-client</module>
+        <module>openfeign-client-ribbon</module>
+        <module>openfeign-client-ribbon-eureka</module>
     </modules>
 
 </project>
