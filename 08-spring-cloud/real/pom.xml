@@ -22,5 +22,7 @@
     <modules>
         <module>knowledge-base-interface</module>
         <module>hitchhikers-guide-galaxy</module>
+        <module>config-locally</module>
+        <module>config-centralized</module>
     </modules>
 </project>

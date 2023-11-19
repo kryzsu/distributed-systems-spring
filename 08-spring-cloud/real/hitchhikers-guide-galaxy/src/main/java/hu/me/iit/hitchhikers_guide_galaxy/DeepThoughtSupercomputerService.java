@@ -27,7 +27,7 @@ public class DeepThoughtSupercomputerService implements LifeUniverseEverythingSe
         this.instanceId = instanceId;
     }
 
-    @Value("${answer-id}")
+    @Value("${answer-id:42}")
     public void setAnswer(int answer) {
         this.answer = answer;
     }
