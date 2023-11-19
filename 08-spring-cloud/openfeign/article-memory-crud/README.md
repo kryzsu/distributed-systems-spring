@@ -30,10 +30,10 @@ curl -X POST http://localhost:8080/article \
 
 ## replace the first entity
 ```shell
-curl -X PUT http://localhost:8080/article \
+curl -X PUT http://localhost:8080/article/ \
    -H 'Content-Type: application/json' \
    -H 'Accept: application/json' \
-   -d '{"id": 1, "author": "author2-m", "title": "title2", "pages": 123}'
+   -d '{"id": 1, "author": "author2-m", "title": "title2", "pages": 90}'
 ```
 
 ## delete the second entity
@@ -45,17 +45,6 @@ curl -X DELETE http://localhost:8080/article/2
 ```shell
 curl -X GET http://localhost:8080/article 
 ```
-
-if there is any json response then
-
-http://localhost:8080/swagger-ui/index.html
-
-replace the "https://petstore.swagger.io/v2/swagger.json" with 
-the "http://localhost:8080/v3/api-docs" before the explore button
-
-https://stackoverflow.blog/2020/03/02/best-practices-for-rest-api-design/
-
-CRUD
 
 * GET /articles/
 * POST /articles/

@@ -15,5 +15,5 @@ mvn spring-boot:run
 
 ## get articles
 ```shell
-curl -X GET http://localhost:12121/findAllBigBook 
+curl -X GET http://localhost:12121/find-all-big-book 
 ```

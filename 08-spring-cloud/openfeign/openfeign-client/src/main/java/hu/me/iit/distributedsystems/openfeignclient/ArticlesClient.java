@@ -10,12 +10,12 @@ import java.util.List;
 @FeignClient("articles")
 public interface ArticlesClient {
 
-    @GetMapping(path="", produces= MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path="article", produces= MediaType.APPLICATION_JSON_VALUE)
     List<ArticleDto> allArticles();
-    @PostMapping(path="")
+    @PostMapping(path="article")
     void newArticle(@RequestBody @Valid ArticleDto articleDto);
-    @PutMapping(path="/")
+    @PutMapping(path="article/")
     void replaceArticle(@RequestBody @Valid ArticleDto articleDto);
-    @DeleteMapping (path="/{id}")
+    @DeleteMapping (path="article/{id}")
     void deleteArticle(@PathVariable("id") Long id);
 }
