@@ -1,19 +1,8 @@
-# testing first app
-```shell
-curl http://localhost:9000/ultimate-response
-```
+# library project for hitchhiker applications
 
-```shell
-open http://localhost:9000/ultimate-response
-```
+It contains the service and controller, but it is not a real Spring application.
 
-### start first instance
+### install the library
 ```shell
-mvn spring-boot:run
-```
-
-### start another instance
-```shell
-export SERVER_PORT=9001
-mvn spring-boot:run
+mvn install
 ```

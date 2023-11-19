@@ -20,6 +20,7 @@
         <module>spring-cloud-config</module>
         <module>netflix-discovery</module>
         <module>real</module>
+        <module>openfeign</module>
     </modules>
 
 </project>

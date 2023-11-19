@@ -1,10 +1,10 @@
 # testing first app
 ```shell
-curl http://localhost:9000/ultimate-response
+curl http://localhost:9000/oraculum/ultimate-response
 ```
 
 ```shell
-open http://localhost:9000/ultimate-response
+open http://localhost:9000/oraculum/ultimate-response
 ```
 
 ### start first instance
